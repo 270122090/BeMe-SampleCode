@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Basic BeMe User Information Class template </h2>
+
+<!--(A) this is calling the funciton in the Javascript script section-->
+<p id="beme"></p>
+<p id="bemeTell"></p>
+
+<script>
+
+//Parent Class 
+class Users {
+  constructor(fname,lname,role,about,email,pass) {
+        this.firstname = fname
+        this.lastname = lname
+        this.title = role
+        this.aboutme = about
+        this.emailaddress = email
+        this.password = pass
+  }
+  genericinfo()
+  {
+  	return "Current Role: "+this.title + "<br>"+"About them: "+this.aboutme
+  }
+  
+}
+
+//Child Class for Skills
+class Skills extends Users {
+	
+}
+
+//Child Class for Experience
+class Experience extends Users {
+	
+}
+
+//Child Class for Portfolio
+class Portfolio extends Users {
+	
+}
+const user1 = new Users("Nolene", "Human","Student","Love figuring shit out","email@earth.com","TopSecret");
+const user2 = new Users("Raghii", "Baxter","Student","Love making things work","email@space.com","SuperSecret");
+
+
+//(A) <p id="beme"></p>
+document.getElementById("beme").innerHTML =
+user1.firstname + " " + user1.lastname;
+
+
+document.getElementById("bemeTell").innerHTML = user1.genericinfo()
+//
+
+</script>
+
+</body>
+</html>
